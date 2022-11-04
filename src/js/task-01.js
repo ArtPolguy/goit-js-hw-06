@@ -1,14 +1,20 @@
 const listItemRefs = document.querySelectorAll(`.item`);
 console.log(`Number of categories: ${listItemRefs.length}`);
 
-const firstListItemHeadRefs = document.querySelector(`.item h2`);
-console.log(`Category: ${firstListItemHeadRefs.textContent}`);
+const firstListHeadRefs = listItemRefs[0].firstElementChild;
+console.log(`Category: ${firstListHeadRefs.textContent}`);
 
-// const test = listItemRefs.firstElementChild(`ul`);
-// console.log(test);
+const firstItemsRefs = listItemRefs[0].querySelectorAll(`li`);
+console.log(`Elements: ${firstItemsRefs.length}`);
 
-const listAnimalRefs = firstListItemHeadRefs.nextElementSibling;
-console.log(listAnimalRefs);
+const secondListHeadRefs = listItemRefs[1].firstElementChild;
+console.log(`Category: ${secondListHeadRefs.textContent}`);
 
-const test2 = listAnimalRefs.querySelectorAll(`li`);
-console.log(test2.length);
+const secondItemsRefs = listItemRefs[1].querySelectorAll(`li`);
+console.log(`Elements: ${secondItemsRefs.length}`);
+
+const thirdListHeadRefs = listItemRefs[2].firstElementChild;
+console.log(`Category: ${thirdListHeadRefs.textContent}`);
+
+const thirdItemsRefs = listItemRefs[2].querySelectorAll(`li`);
+console.log(`Elements: ${thirdItemsRefs.length}`);
